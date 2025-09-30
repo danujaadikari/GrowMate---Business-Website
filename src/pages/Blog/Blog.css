@@ -1,0 +1,22 @@
+.blog-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.blog-main {
+  /* Main blog content styling handled in BlogGrid component */
+}
+
+.blog-sidebar-section {
+  /* Sidebar styling handled in BlogSidebar component */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
