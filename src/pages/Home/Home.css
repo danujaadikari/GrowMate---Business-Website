@@ -1,0 +1,8 @@
+.page-wrapper {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Home page specific styles */
+.home-page {
+  /* Any specific styles for the home page */
+}
