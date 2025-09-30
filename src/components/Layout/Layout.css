@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+/* Smooth scrolling for internal links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page animation wrapper */
+.page-wrapper {
+  animation: fadeInUp 0.6s ease-out;
+}
