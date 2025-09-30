@@ -7,7 +7,7 @@ const CTA = ({
   title = "Ready to Transform Your Business?",
   subtitle = "Join hundreds of successful companies that have accelerated their growth with GrowMate. Let's discuss how we can help you achieve your business goals.",
   primaryButton = { text: "Get Started Today", link: "/contact" },
-  secondaryButton = { text: "Schedule a Call", link: "tel:+15551234567" },
+  secondaryButton = { text: "Schedule a Call", link: "tel:+94786621310" },
   background = "primary" // primary, secondary, or gradient
 }) => {
   return (
