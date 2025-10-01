@@ -1,0 +1,35 @@
+.map-section {
+  height: 400px;
+  background: var(--bg-tertiary);
+}
+
+.map-container {
+  height: 100%;
+  position: relative;
+}
+
+.map-placeholder {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.map-content {
+  text-align: center;
+  color: white;
+}
+
+.map-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.map-content p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
