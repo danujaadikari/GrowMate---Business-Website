@@ -36,18 +36,18 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: <FiMail />,
-      text: 'hello@growmate.com',
-      link: 'mailto:hello@growmate.com'
+      text: 'danujaadikari2001@gmail.com',
+      link: 'mailto:danujaadikari2001@gmail.com'
     },
     {
       icon: <FiPhone />,
-      text: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      text: '+94 78 662 1310',
+      link: 'tel:+94786621310'
     },
     {
       icon: <FiMapPin />,
-      text: '123 Business Ave, Suite 100, City, ST 12345',
-      link: 'https://maps.google.com'
+      text: 'Colombo, Sri Lanka',
+      link: 'https://maps.google.com/search/Colombo+Sri+Lanka'
     }
   ];
 
@@ -170,6 +170,7 @@ const Footer = () => {
           <div className="footer-bottom-content">
             <div className="copyright">
               <p>&copy; {currentYear} GrowMate. All rights reserved.</p>
+              <p className="developer-credit">Developed by: Danuja Adikari</p>
             </div>
             
             <div className="social-links">
