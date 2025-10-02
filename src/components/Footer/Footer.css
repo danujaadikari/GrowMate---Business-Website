@@ -7,8 +7,10 @@
 .footer-content {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: 3rem;
-  padding: 4rem 0 2rem;
+  gap: 4rem;
+  padding: 5rem 0 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Company Info Section */
@@ -73,7 +75,8 @@
 }
 
 .footer-section {
-  /* Base styles for all footer sections */
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-heading {
