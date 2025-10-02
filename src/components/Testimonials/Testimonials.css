@@ -3,5 +3,8 @@
 }
 
 .testimonials-header {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
