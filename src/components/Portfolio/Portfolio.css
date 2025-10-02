@@ -1,7 +1,10 @@
 .portfolio-section {
-  background: var(--bg-secondary);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(248, 250, 252, 0.3) 100%);
 }
 
 .portfolio-header {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
