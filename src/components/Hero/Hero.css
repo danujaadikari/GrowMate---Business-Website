@@ -32,9 +32,11 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Main Content */
@@ -44,11 +46,18 @@
 
 .hero-badge {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(37, 99, 235, 0.1);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 0.625rem 1.25rem;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   border-radius: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
 .badge-text {
@@ -58,13 +67,13 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.1;
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.15;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-family: 'Poppins', sans-serif;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .title-highlight {
@@ -72,14 +81,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
 }
 
 .hero-description {
-  font-size: 1.25rem;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  line-height: 1.7;
   color: var(--text-secondary);
-  margin-bottom: 2.5rem;
-  max-width: 90%;
+  margin-bottom: 3rem;
+  max-width: 85%;
+  font-weight: 400;
 }
 
 .hero-actions {
@@ -129,25 +140,37 @@
 /* Stats */
 .hero-stats {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
+  margin-top: 1rem;
 }
 
 .stat-item {
   display: flex;
   align-items: center;
   gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
 }
 
 .stat-icon {
-  width: 50px;
-  height: 50px;
-  background: rgba(37, 99, 235, 0.1);
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(5, 150, 105, 0.08) 100%);
+  transform: scale(1.05);
 }
 
 .stat-number {
