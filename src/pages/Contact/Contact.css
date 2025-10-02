@@ -1,19 +1,23 @@
 .contact-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact-form-section {
-  background: var(--bg-secondary);
-  padding: 3rem;
-  border-radius: 1rem;
-  box-shadow: var(--shadow-light);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .contact-info-section {
-  /* Contact info styling handled in ContactInfo component */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* Responsive Design */
