@@ -257,7 +257,8 @@
 
 /* Responsive */
 .desktop-only {
-  display: block;
+  display: inline-flex;
+  align-items: center;
 }
 
 .mobile-only {
@@ -266,7 +267,7 @@
 
 @media (max-width: 768px) {
   .desktop-only {
-    display: none;
+    display: none !important;
   }
   
   .mobile-only {
