@@ -7,7 +7,7 @@ const ContactInfo = () => {
     {
       icon: <FiMail />,
       title: 'Email Us',
-      details: ['danujaadikari2001@gmail.com', 'hello@growmate.com'],
+      details: ['danujaadikari2001@gmail.com'],
       action: { text: 'Send Email', link: 'mailto:danujaadikari2001@gmail.com' }
     },
     {
