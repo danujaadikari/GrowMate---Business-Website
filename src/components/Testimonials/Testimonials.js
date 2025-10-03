@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { FiChevronLeft, FiChevronRight, FiStar, FiPlay, FiQuote } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiStar, FiPlay, FiMessageCircle } from 'react-icons/fi';
 import './Testimonials.css';
 
 const Testimonials = () => {
@@ -167,7 +167,7 @@ const Testimonials = () => {
                 <div className="testimonial-content">
                   {/* Quote Icon */}
                   <div className="quote-icon">
-                    <FiQuote />
+                    <FiMessageCircle />
                   </div>
 
                   {/* Rating */}
