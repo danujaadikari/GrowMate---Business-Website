@@ -70,7 +70,7 @@ const Footer = () => {
             </Link>
             <p className="company-description">
               Empowering businesses to achieve sustainable growth through innovative strategies, 
-              cutting-edge technology, and expert consulting services.
+              cutting-edge technology, and expert consulting services. Contact us to transform your business.
             </p>
             
             {/* Contact Information */}
