@@ -213,14 +213,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### GrowMate
 
-- Email: danujaadikari2001@gmail.com
+ - Email: <danujaadikari2001@gmail.com>
 - Phone: +94 78 662 1310
 - Location: Colombo, Sri Lanka
 - Website: [growmate.com](https://growmate.com)
 
 ### Developer: Danuja Adikari
 
-- Email: danujaadikari2001@gmail.com
+ - Email: <danujaadikari2001@gmail.com>
 - Phone: +94 78 662 1310
 - Location: Colombo, Sri Lanka
 
