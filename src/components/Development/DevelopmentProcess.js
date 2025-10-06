@@ -61,7 +61,7 @@ const DevelopmentProcess = () => {
 
         <div className="dev-grid">
           {STEPS.map(step => (
-            <div key={step.id} className="dev-card" style={{ '--step-index': step.id }}>
+            <div key={step.id} className="dev-card" style={{ '--step-index': `${step.id}` }}>
               <div className="dev-icon-wrapper">
                 <div className="dev-icon">{step.icon}</div>
                 <div className="dev-index">{String(step.id).padStart(2, '0')}</div>
