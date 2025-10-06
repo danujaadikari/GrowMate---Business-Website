@@ -16,8 +16,8 @@ A modern, responsive React-based business website for GrowMate, featuring compre
 - **Footer**: Comprehensive footer with links, contact info, and newsletter signup
 - **Page Structure**: All essential pages (Home, About, Services, Portfolio, Contact, Blog)
 - **Interactive Elements**: Scroll-to-top button, loading states, animations
- - **SEO Ready**: Meta tags, Open Graph, and Twitter Card support
- - **Development Process UI**: Visual 6-step growth & delivery process (Discover → Optimize) with animated progress bars
+- **SEO Ready**: Meta tags, Open Graph, and Twitter Card support
+- **Development Process UI**: Visual 6-step growth & delivery process (Discover → Optimize) with animated progress bars
 
 ### 🎨 Design Highlights
 
@@ -127,11 +127,11 @@ npm start
 ## 📱 Pages
 
 1. **Homepage** - Hero, services overview, testimonials, CTA
-2. **About** - Company story, team, values
-3. **Services** - Detailed service listings, pricing, process
-4. **Portfolio** - Case studies, project showcases
-5. **Contact** - Contact form, business info, map
-6. **Blog** - Articles, insights, resources
+1. **About** - Company story, team, values
+1. **Services** - Detailed service listings, pricing, process
+1. **Portfolio** - Case studies, project showcases
+1. **Contact** - Contact form, business info, map
+1. **Blog** - Articles, insights, resources
 
 ## 🎯 Business Features
 
@@ -146,7 +146,9 @@ npm start
 ## 🔧 Customization
 
 ### Theme Colors
+
 Edit CSS variables in `src/index.css`:
+
 ```css
 :root {
   --primary-color: #2563eb;
@@ -156,6 +158,7 @@ Edit CSS variables in `src/index.css`:
 ```
 
 ### Content Updates
+
 - Update company info in `src/components/Footer/Footer.js`
 - Modify services in `src/components/Services/Services.js`
 - Update contact details in `src/components/ContactInfo/ContactInfo.js`
@@ -163,15 +166,18 @@ Edit CSS variables in `src/index.css`:
 ## 📦 Dependencies
 
 ### Core
+
 - React 18.2.0
 - React DOM 18.2.0
 - React Router DOM 6.8.0
 
 ### UI & Styling
+
 - React Icons 4.7.1
 - Framer Motion 8.5.2 (for animations)
 
 ### Development
+
 - React Scripts 5.0.1
 - Testing utilities included
 
@@ -205,13 +211,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-**GrowMate**
+### GrowMate
 - Email: danujaadikari2001@gmail.com
 - Phone: +94 78 662 1310
 - Location: Colombo, Sri Lanka
 - Website: [growmate.com](https://growmate.com)
 
-**Developer: Danuja Adikari**
+### Developer: Danuja Adikari
 - Email: danujaadikari2001@gmail.com
 - Phone: +94 78 662 1310
 - Location: Colombo, Sri Lanka
