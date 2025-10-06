@@ -17,6 +17,7 @@ A modern, responsive React-based business website for GrowMate, featuring compre
 - **Page Structure**: All essential pages (Home, About, Services, Portfolio, Contact, Blog)
 - **Interactive Elements**: Scroll-to-top button, loading states, animations
 - **SEO Ready**: Meta tags, Open Graph, and Twitter Card support
+ - **Development Process UI**: Visual 6-step growth & delivery process (Discover → Optimize) with animated progress bars
 
 ### 🎨 Design Highlights
 
@@ -128,6 +129,7 @@ npm start
 ## 🎯 Business Features
 
 - **Service Showcase**: Business consulting, digital marketing, web development
+ - **Structured Delivery Process**: Transparent 6-phase methodology (Discovery, Planning, Design, Development, Launch, Optimization)
 - **Contact Forms**: Lead generation with form validation
 - **Newsletter Signup**: Email collection for marketing
 - **Social Media Integration**: Links to all social platforms
