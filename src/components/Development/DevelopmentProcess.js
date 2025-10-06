@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiTarget, FiLayers, FiPenTool, FiCode, FiRocket, FiTrendingUp } from 'react-icons/fi';
+import { FiTarget, FiLayers, FiPenTool, FiCode, FiSend, FiTrendingUp } from 'react-icons/fi';
 import './DevelopmentProcess.css';
 
 const STEPS = [
@@ -34,7 +34,7 @@ const STEPS = [
   {
     id: 5,
     title: 'Launch',
-    icon: <FiRocket />,
+    icon: <FiSend />,
     tagline: 'Deploy & Stabilize',
     description: 'Smooth deployment pipeline with QA, accessibility checks, and performance optimization.'
   },
