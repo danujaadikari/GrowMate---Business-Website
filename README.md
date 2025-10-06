@@ -16,7 +16,7 @@ A modern, responsive React-based business website for GrowMate, featuring compre
 - **Footer**: Comprehensive footer with links, contact info, and newsletter signup
 - **Page Structure**: All essential pages (Home, About, Services, Portfolio, Contact, Blog)
 - **Interactive Elements**: Scroll-to-top button, loading states, animations
-- **SEO Ready**: Meta tags, Open Graph, and Twitter Card support
+ - **SEO Ready**: Meta tags, Open Graph, and Twitter Card support
  - **Development Process UI**: Visual 6-step growth & delivery process (Discover → Optimize) with animated progress bars
 
 ### 🎨 Design Highlights
@@ -44,7 +44,7 @@ These UI/UX touches make the interface feel polished and professional:
 
 ## 📁 Project Structure
 
-```
+```txt
 src/
 ├── components/           # Reusable UI components
 │   ├── Layout/          # Main layout wrapper
@@ -72,38 +72,45 @@ src/
 ## 🎨 Design System
 
 ### Colors
+
 - **Primary**: Blue (#2563eb)
 - **Secondary**: Green (#10b981)
 - **Accent**: Amber (#f59e0b)
 
 ### Typography
+
 - **Headings**: Poppins (700-800 weight)
 - **Body**: Inter (400-600 weight)
 
 ### Spacing
+
 - Consistent spacing scale (0.25rem increments)
 - Section padding: 5rem vertical
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/danujaadikari/GrowMate---Business-Website.git
 cd GrowMate---Business-Website
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm start
 ```
@@ -129,7 +136,7 @@ npm start
 ## 🎯 Business Features
 
 - **Service Showcase**: Business consulting, digital marketing, web development
- - **Structured Delivery Process**: Transparent 6-phase methodology (Discovery, Planning, Design, Development, Launch, Optimization)
+- **Structured Delivery Process**: Transparent 6-phase methodology (Discovery, Planning, Design, Development, Launch, Optimization)
 - **Contact Forms**: Lead generation with form validation
 - **Newsletter Signup**: Email collection for marketing
 - **Social Media Integration**: Links to all social platforms
