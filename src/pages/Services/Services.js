@@ -3,6 +3,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import ServicesList from '../../components/ServicesList/ServicesList';
 import PricingSection from '../../components/PricingSection/PricingSection';
 import ProcessSection from '../../components/ProcessSection/ProcessSection';
+import FAQ from '../../components/FAQ/FAQ';
 import CTA from '../../components/CTA/CTA';
 import './Services.css';
 
@@ -20,6 +21,7 @@ const Services = () => {
       <ServicesList />
       <ProcessSection />
       <PricingSection />
+      <FAQ />
       <CTA />
     </div>
   );
