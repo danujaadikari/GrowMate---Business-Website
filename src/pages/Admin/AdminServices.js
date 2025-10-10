@@ -508,29 +508,44 @@ const AdminServices = () => {
         )}
       </div>
 
-      {/* Edit Modal - This would contain detailed edit forms */}
+      {/* Edit Modal */}
       {editingItem && (
         <div className="edit-modal-overlay" onClick={() => setEditingItem(null)}>
           <div className="edit-modal" onClick={e => e.stopPropagation()}>
             <div className="modal-header">
-              <h3>Edit {editingItem.type}</h3>
+              <h3>
+                Edit {editingItem.type === 'service' ? 'Service' : 
+                     editingItem.type === 'pricing' ? 'Pricing Plan' : 'FAQ'}
+              </h3>
               <button className="btn-icon" onClick={() => setEditingItem(null)}>
                 <FiX />
               </button>
             </div>
             <div className="modal-content">
-              {/* Detailed edit forms would go here */}
-              <p>Detailed edit form for {editingItem.type} #{editingItem.id}</p>
-              <p><em>Full edit forms would be implemented here...</em></p>
-            </div>
-            <div className="modal-actions">
-              <button className="btn btn-secondary" onClick={() => setEditingItem(null)}>
-                Cancel
-              </button>
-              <button className="btn btn-primary">
-                <FiSave />
-                Save Changes
-              </button>
+              {editingItem.type === 'service' && (
+                <ServiceEditor
+                  service={services.find(s => s.id === editingItem.id)}
+                  onSave={(updatedService) => {
+                    updateService(editingItem.id, updatedService);
+                    setEditingItem(null);
+                  }}
+                  onCancel={() => setEditingItem(null)}
+                />
+              )}
+              
+              {editingItem.type === 'pricing' && (
+                <div className="pricing-editor-form">
+                  <p>Pricing plan editor would go here...</p>
+                  <p><em>Full pricing editor form coming soon...</em></p>
+                </div>
+              )}
+              
+              {editingItem.type === 'faq' && (
+                <div className="faq-editor-form">
+                  <p>FAQ editor would go here...</p>
+                  <p><em>Full FAQ editor form coming soon...</em></p>
+                </div>
+              )}
             </div>
           </div>
         </div>
