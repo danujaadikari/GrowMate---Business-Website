@@ -112,6 +112,15 @@ const Navbar = () => {
               {isDark ? <FiSun /> : <FiMoon />}
             </button>
 
+            {/* Admin Link (discrete) */}
+            <Link 
+              to="/admin/services" 
+              className="admin-link"
+              title="Admin Panel"
+            >
+              ⚙️
+            </Link>
+
             {/* CTA Button */}
             <Link to="/contact" className="btn btn-primary btn-sm desktop-only">
               Get Started
