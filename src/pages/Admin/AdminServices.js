@@ -3,7 +3,9 @@ import {
   FiEdit3, FiSave, FiPlus, FiTrash2, FiEye, FiDownload, 
   FiUpload, FiRefreshCw, FiSettings, FiCheck, FiX 
 } from 'react-icons/fi';
+import ServiceEditor from '../../components/Admin/ServiceEditor';
 import './AdminServices.css';
+import '../../components/Admin/ServiceEditor.css';
 
 const AdminServices = () => {
   // Services data state
