@@ -90,6 +90,16 @@
   cursor: pointer;
 }
 
+.consent-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.consent-group input[type="checkbox"] {
+  width: auto;
+}
+
 .form-submit {
   margin-top: 1rem;
   width: 100%;
