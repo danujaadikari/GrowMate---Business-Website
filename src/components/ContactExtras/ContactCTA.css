@@ -1,0 +1,68 @@
+/* Contact CTA */
+.contact-cta {
+  padding: 4rem 0;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.cta-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.cta-card.hours {
+  grid-column: span 2;
+}
+
+.cta-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: white;
+  background: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.cta-icon.secondary { background: #0ea5e9; }
+.cta-icon.accent { background: #22c55e; }
+
+.cta-content h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.cta-content p {
+  margin: 0 0 0.75rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.cta-content ul {
+  padding-left: 1rem;
+  margin: 0.25rem 0 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .cta-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-card.hours { grid-column: span 2; }
+}
+
+@media (max-width: 640px) {
+  .cta-grid { grid-template-columns: 1fr; }
+  .cta-card.hours { grid-column: span 1; }
+}
