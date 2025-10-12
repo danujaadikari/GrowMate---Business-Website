@@ -4,6 +4,8 @@ import {
   FiUpload, FiRefreshCw, FiSettings, FiCheck, FiX 
 } from 'react-icons/fi';
 import ServiceEditor from '../../components/Admin/ServiceEditor';
+import PricingPlanEditor from '../../components/Admin/PricingPlanEditor';
+import FaqEditor from '../../components/Admin/FaqEditor';
 import './AdminServices.css';
 import '../../components/Admin/ServiceEditor.css';
 
@@ -534,17 +536,25 @@ const AdminServices = () => {
               )}
               
               {editingItem.type === 'pricing' && (
-                <div className="pricing-editor-form">
-                  <p>Pricing plan editor would go here...</p>
-                  <p><em>Full pricing editor form coming soon...</em></p>
-                </div>
+                <PricingPlanEditor
+                  plan={pricingPlans.find(p => p.id === editingItem.id)}
+                  onSave={(updatedPlan) => {
+                    updatePricingPlan(editingItem.id, updatedPlan);
+                    setEditingItem(null);
+                  }}
+                  onCancel={() => setEditingItem(null)}
+                />
               )}
               
               {editingItem.type === 'faq' && (
-                <div className="faq-editor-form">
-                  <p>FAQ editor would go here...</p>
-                  <p><em>Full FAQ editor form coming soon...</em></p>
-                </div>
+                <FaqEditor
+                  faq={faqData.find(f => f.id === editingItem.id)}
+                  onSave={(updatedFaq) => {
+                    updateFaq(editingItem.id, updatedFaq);
+                    setEditingItem(null);
+                  }}
+                  onCancel={() => setEditingItem(null)}
+                />
               )}
             </div>
           </div>
