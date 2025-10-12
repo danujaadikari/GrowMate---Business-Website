@@ -9,7 +9,11 @@ const ContactForm = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
+    budget: '',
+    message: '',
+    consent: false,
+    attachment: null,
+    website: '' // honeypot
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -23,9 +27,10 @@ const ContactForm = () => {
   ];
 
   const handleChange = (e) => {
+    const { name, type, value, checked, files } = e.target;
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [name]: type === 'checkbox' ? checked : (type === 'file' ? (files?.[0] || null) : value)
     }));
   };
 
@@ -34,6 +39,12 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     // Simulate form submission
+    // Basic spam honeypot check
+    if (formData.website) {
+      setIsSubmitting(false);
+      return;
+    }
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -43,7 +54,11 @@ const ContactForm = () => {
         company: '',
         phone: '',
         service: '',
-        message: ''
+        budget: '',
+        message: '',
+        consent: false,
+        attachment: null,
+        website: ''
       });
       
       // Reset success message after 5 seconds
@@ -149,6 +164,34 @@ const ContactForm = () => {
           </select>
         </div>
 
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="budget" className="form-label">Estimated Budget (USD)</label>
+            <input
+              type="number"
+              id="budget"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              className="form-input"
+              placeholder="e.g., 2500"
+              min="0"
+              step="100"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="attachment" className="form-label">Attachment (Brief/Requirements)</label>
+            <input
+              type="file"
+              id="attachment"
+              name="attachment"
+              onChange={handleChange}
+              className="form-input"
+              accept=".pdf,.doc,.docx,.txt,.md"
+            />
+          </div>
+        </div>
+
         <div className="form-group">
           <label htmlFor="message" className="form-label">Message *</label>
           <textarea
@@ -162,6 +205,23 @@ const ContactForm = () => {
             placeholder="Tell us about your project and goals..."
           />
         </div>
+
+        <div className="form-group consent-group">
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            checked={formData.consent}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="consent" className="form-label">
+            I agree to the processing of my data in accordance with the privacy policy.
+          </label>
+        </div>
+
+        {/* Honeypot */}
+        <input type="text" name="website" value={formData.website} onChange={handleChange} style={{ display: 'none' }} />
 
         <button 
           type="submit" 
