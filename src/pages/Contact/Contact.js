@@ -4,6 +4,8 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 import ContactInfo from '../../components/ContactInfo/ContactInfo';
 import MapSection from '../../components/MapSection/MapSection';
 import './Contact.css';
+import ContactCTA from '../../components/ContactExtras/ContactCTA';
+import SocialProof from '../../components/ContactExtras/SocialProof';
 
 const Contact = () => {
   return (
@@ -27,9 +29,10 @@ const Contact = () => {
               <ContactInfo />
             </div>
           </div>
+          <SocialProof />
         </div>
       </section>
-      
+      <ContactCTA />
       <MapSection />
     </div>
   );
