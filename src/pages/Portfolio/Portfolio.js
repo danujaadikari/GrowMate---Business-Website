@@ -2,6 +2,7 @@ import React from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import PortfolioGrid from '../../components/PortfolioGrid/PortfolioGrid';
 import CaseStudies from '../../components/CaseStudies/CaseStudies';
+import TechStack from '../../components/TechStack/TechStack';
 import CTA from '../../components/CTA/CTA';
 import './Portfolio.css';
 
@@ -18,6 +19,7 @@ const Portfolio = () => {
       />
       <PortfolioGrid />
       <CaseStudies />
+      <TechStack />
       <CTA />
     </div>
   );
