@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FiSearch, FiExternalLink, FiCode, FiTrendingUp, FiShoppingCart, FiBarChart2, FiGlobe } from 'react-icons/fi';
 import './PortfolioGrid.css';
 
@@ -6,6 +6,68 @@ const PortfolioGrid = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const statsRef = useRef(null);
+
+  // Animated counter hook
+  const useCountUp = (end, duration = 2000, shouldStart = false) => {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+      if (!shouldStart) return;
+      
+      let startTime;
+      let animationFrame;
+
+      const animate = (currentTime) => {
+        if (!startTime) startTime = currentTime;
+        const progress = (currentTime - startTime) / duration;
+
+        if (progress < 1) {
+          setCount(Math.floor(end * progress));
+          animationFrame = requestAnimationFrame(animate);
+        } else {
+          setCount(end);
+        }
+      };
+
+      animationFrame = requestAnimationFrame(animate);
+      return () => cancelAnimationFrame(animationFrame);
+    }, [end, duration, shouldStart]);
+
+    return count;
+  };
+
+  // Intersection Observer to trigger animation when stats are visible
+  useEffect(() => {
+    const currentRef = statsRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [hasAnimated]);
+
+  // Animated stats values
+  const projectsCount = useCountUp(150, 2000, hasAnimated);
+  const satisfactionCount = useCountUp(98, 2000, hasAnimated);
+  const clientsCount = useCountUp(50, 2000, hasAnimated);
+  const revenueCount = useCountUp(5, 2000, hasAnimated);
 
   const projects = [
     {
@@ -156,21 +218,21 @@ const PortfolioGrid = () => {
     <section className="portfolio-grid-section section-padding">
       <div className="container">
         {/* Stats Bar */}
-        <div className="portfolio-stats">
+        <div className="portfolio-stats" ref={statsRef}>
           <div className="stat-card">
-            <div className="stat-number">150+</div>
+            <div className="stat-number">{projectsCount}+</div>
             <div className="stat-label">Projects Completed</div>
           </div>
           <div className="stat-card">
-            <div className="stat-number">98%</div>
+            <div className="stat-number">{satisfactionCount}%</div>
             <div className="stat-label">Client Satisfaction</div>
           </div>
           <div className="stat-card">
-            <div className="stat-number">50+</div>
+            <div className="stat-number">{clientsCount}+</div>
             <div className="stat-label">Happy Clients</div>
           </div>
           <div className="stat-card">
-            <div className="stat-number">$5M+</div>
+            <div className="stat-number">${revenueCount}M+</div>
             <div className="stat-label">Revenue Generated</div>
           </div>
         </div>
