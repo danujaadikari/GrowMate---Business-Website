@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   FiEdit3, FiSave, FiPlus, FiTrash2, FiEye, FiDownload, 
-  FiUpload, FiRefreshCw, FiSettings, FiCheck, FiX 
+  FiUpload, FiRefreshCw, FiSettings, FiX 
 } from 'react-icons/fi';
 import ServiceEditor from '../../components/Admin/ServiceEditor';
 import PricingPlanEditor from '../../components/Admin/PricingPlanEditor';
