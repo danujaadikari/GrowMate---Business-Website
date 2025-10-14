@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiChevronLeft, FiChevronRight, FiQuote, FiTrendingUp, FiDollarSign, FiUsers, FiStar } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiMessageSquare, FiTrendingUp, FiDollarSign, FiUsers, FiStar } from 'react-icons/fi';
 import './CaseStudies.css';
 
 const CaseStudies = () => {
@@ -131,7 +131,7 @@ const CaseStudies = () => {
               </div>
 
               <div className="case-testimonial">
-                <FiQuote className="quote-icon" />
+                <FiMessageSquare className="quote-icon" />
                 <blockquote>{currentCase.testimonial.quote}</blockquote>
                 <div className="testimonial-author">
                   <img src={currentCase.testimonial.avatar} alt={currentCase.testimonial.author} />
