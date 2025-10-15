@@ -3,6 +3,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import TeamSection from '../../components/TeamSection/TeamSection';
 import ValueSection from '../../components/ValueSection/ValueSection';
 import StorySection from '../../components/StorySection/StorySection';
+import AchievementsSection from '../../components/AchievementsSection/AchievementsSection';
 import CTA from '../../components/CTA/CTA';
 import './About.css';
 
@@ -19,6 +20,7 @@ const About = () => {
       />
       <StorySection />
       <ValueSection />
+      <AchievementsSection />
       <TeamSection />
       <CTA />
     </div>
