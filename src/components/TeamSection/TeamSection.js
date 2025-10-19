@@ -1,8 +1,10 @@
-import React from 'react';
-import { FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
+import React, { useState } from 'react';
+import { FiLinkedin, FiTwitter, FiMail, FiSearch } from 'react-icons/fi';
 import './TeamSection.css';
 
 const TeamSection = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
   const teamMembers = [
     {
       name: 'Sarah Johnson',
@@ -60,6 +62,16 @@ const TeamSection = () => {
     }
   ];
 
+  // Filter team members based on search term
+  const filteredTeamMembers = teamMembers.filter(member => {
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      member.name.toLowerCase().includes(searchLower) ||
+      member.role.toLowerCase().includes(searchLower) ||
+      member.bio.toLowerCase().includes(searchLower)
+    );
+  });
+
   return (
     <section className="team-section">
       <div className="container">
@@ -70,8 +82,37 @@ const TeamSection = () => {
           </p>
         </div>
 
+        {/* Search Bar */}
+        <div className="search-container">
+          <div className="search-box">
+            <FiSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search team members by name, role, or expertise..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+            {searchTerm && (
+              <button 
+                className="clear-search"
+                onClick={() => setSearchTerm('')}
+                aria-label="Clear search"
+              >
+                ×
+              </button>
+            )}
+          </div>
+          {searchTerm && (
+            <p className="search-results-text">
+              Found {filteredTeamMembers.length} team member{filteredTeamMembers.length !== 1 ? 's' : ''}
+            </p>
+          )}
+        </div>
+
         <div className="team-grid">
-          {teamMembers.map((member, index) => (
+          {filteredTeamMembers.length > 0 ? (
+            filteredTeamMembers.map((member, index) => (
             <div key={index} className="team-card">
               <div className="team-image-wrapper">
                 <img src={member.image} alt={member.name} className="team-image" />
@@ -95,7 +136,13 @@ const TeamSection = () => {
                 <p className="team-bio">{member.bio}</p>
               </div>
             </div>
-          ))}
+          ))
+          ) : (
+            <div className="no-results">
+              <p className="heading-sm">No team members found</p>
+              <p className="body-md">Try adjusting your search terms</p>
+            </div>
+          )}
         </div>
 
         {/* Join Our Team CTA */}
