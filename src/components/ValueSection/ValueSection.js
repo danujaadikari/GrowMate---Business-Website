@@ -46,6 +46,15 @@ const ValueSection = () => {
     }
   ];
 
+  // Filter values based on search term
+  const filteredValues = values.filter(value => {
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      value.title.toLowerCase().includes(searchLower) ||
+      value.description.toLowerCase().includes(searchLower)
+    );
+  });
+
   return (
     <section className="value-section">
       <div className="container">
@@ -56,14 +65,49 @@ const ValueSection = () => {
           </p>
         </div>
 
+        {/* Search Bar */}
+        <div className="search-container">
+          <div className="search-box">
+            <FiSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search our values..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+            {searchTerm && (
+              <button 
+                className="clear-search"
+                onClick={() => setSearchTerm('')}
+                aria-label="Clear search"
+              >
+                ×
+              </button>
+            )}
+          </div>
+          {searchTerm && (
+            <p className="search-results-text">
+              Found {filteredValues.length} value{filteredValues.length !== 1 ? 's' : ''}
+            </p>
+          )}
+        </div>
+
         <div className="values-grid">
-          {values.map((value, index) => (
+          {filteredValues.length > 0 ? (
+            filteredValues.map((value, index) => (
             <div key={index} className="value-card">
               <div className="value-icon">{value.icon}</div>
               <h3 className="heading-sm">{value.title}</h3>
               <p className="body-md">{value.description}</p>
             </div>
-          ))}
+          ))
+          ) : (
+            <div className="no-results">
+              <p className="heading-sm">No values found</p>
+              <p className="body-md">Try adjusting your search terms</p>
+            </div>
+          )}
         </div>
 
         {/* Our Commitment */}
