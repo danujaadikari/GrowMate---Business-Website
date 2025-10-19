@@ -149,8 +149,37 @@ const AchievementsSection = () => {
             </p>
           </div>
 
+          {/* Search Bar */}
+          <div className="search-container">
+            <div className="search-box">
+              <FiSearch className="search-icon" />
+              <input
+                type="text"
+                placeholder="Search awards by title, organization, or year..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="search-input"
+              />
+              {searchTerm && (
+                <button 
+                  className="clear-search"
+                  onClick={() => setSearchTerm('')}
+                  aria-label="Clear search"
+                >
+                  ×
+                </button>
+              )}
+            </div>
+            {searchTerm && (
+              <p className="search-results-text">
+                Found {filteredAwards.length} award{filteredAwards.length !== 1 ? 's' : ''}
+              </p>
+            )}
+          </div>
+
           <div className="awards-grid">
-            {awards.map((award, index) => (
+            {filteredAwards.length > 0 ? (
+              filteredAwards.map((award, index) => (
               <div key={index} className="award-card">
                 <div className="award-year">{award.year}</div>
                 <div className="award-icon">
