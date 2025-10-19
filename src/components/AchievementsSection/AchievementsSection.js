@@ -189,7 +189,13 @@ const AchievementsSection = () => {
                 <p className="award-org">{award.organization}</p>
                 <p className="award-description">{award.description}</p>
               </div>
-            ))}
+            ))
+            ) : (
+              <div className="no-results">
+                <p className="heading-sm">No awards found</p>
+                <p className="body-md">Try adjusting your search terms</p>
+              </div>
+            )}
           </div>
         </div>
 
