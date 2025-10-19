@@ -94,6 +94,17 @@ const AchievementsSection = () => {
     }
   ];
 
+  // Filter awards based on search term
+  const filteredAwards = awards.filter(award => {
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      award.title.toLowerCase().includes(searchLower) ||
+      award.organization.toLowerCase().includes(searchLower) ||
+      award.description.toLowerCase().includes(searchLower) ||
+      award.year.includes(searchLower)
+    );
+  });
+
   return (
     <section className="achievements-section">
       <div className="container">
