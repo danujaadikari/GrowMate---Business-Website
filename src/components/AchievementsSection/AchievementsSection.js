@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FiAward, FiTrendingUp, FiUsers, FiStar } from 'react-icons/fi';
+import { FiAward, FiTrendingUp, FiUsers, FiStar, FiSearch } from 'react-icons/fi';
 import './AchievementsSection.css';
 
 const AchievementsSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
   const statsRef = useRef(null);
 
   // Animated counter hook
