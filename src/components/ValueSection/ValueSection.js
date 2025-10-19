@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   FiAward, 
   FiUsers, 
   FiZap, 
   FiShield, 
   FiTrendingUp, 
-  FiHeart 
+  FiHeart,
+  FiSearch
 } from 'react-icons/fi';
 import './ValueSection.css';
 
 const ValueSection = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
   const values = [
     {
       icon: <FiAward />,
