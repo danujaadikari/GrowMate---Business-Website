@@ -5,6 +5,7 @@ import DevelopmentProcess from '../../components/Development/DevelopmentProcess'
 import About from '../../components/About/About';
 import Portfolio from '../../components/Portfolio/Portfolio';
 import Testimonials from '../../components/Testimonials/Testimonials';
+import FeaturedNews from '../../components/FeaturedNews/FeaturedNews';
 import CTA from '../../components/CTA/CTA';
 import './Home.css';
 
@@ -17,6 +18,7 @@ const Home = () => {
       <About />
       <Portfolio />
       <Testimonials />
+      <FeaturedNews />
       <CTA />
     </div>
   );
